@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Bright Path Solar logo">
+  <!-- Rising sun -->
+  <g stroke="#f5a623" stroke-width="2.5" stroke-linecap="round">
+    <line x1="13" y1="20" x2="9" y2="20"/>
+    <line x1="17.4" y1="9.4" x2="14.6" y2="6.6"/>
+    <line x1="28" y1="5" x2="28" y2="1"/>
+    <line x1="38.6" y1="9.4" x2="41.4" y2="6.6"/>
+    <line x1="43" y1="20" x2="47" y2="20"/>
+  </g>
+  <circle cx="28" cy="20" r="9" fill="#f5a623"/>
+  <!-- Solar panel -->
+  <polygon points="6,44 13,26 45,26 38,44" fill="#1e5aa8" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+  <g stroke="#ffffff" stroke-width="1.5">
+    <line x1="23.7" y1="26" x2="16.7" y2="44"/>
+    <line x1="34.3" y1="26" x2="27.3" y2="44"/>
+    <line x1="9.5" y1="35" x2="41.5" y2="35"/>
+  </g>
+</svg>
