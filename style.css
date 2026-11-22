@@ -564,15 +564,8 @@ a.contact-card { cursor: pointer; }
 }
 
 /* ---------- Visit us on (social links) [21] ---------- */
-/* Heading on the left with the platform names as plain text beside it */
-.social-visit {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 8px 20px;
-}
-.social-visit h2 { font-size: 1.4rem; }
-/* The three names stay together: if they don't fit beside the heading, they all move under it */
+/* Heading on the left with the platform names as plain text underneath */
+.social-visit h2 { font-size: 1.4rem; margin-bottom: 10px; }
 .social-links { display: flex; gap: 20px; }
 .social-visit a { color: var(--color-primary); font-weight: 600; font-size: 1.05rem; }
 .social-visit a:hover { color: var(--color-primary-dark); text-decoration: underline; }
