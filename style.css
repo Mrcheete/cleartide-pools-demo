@@ -34,6 +34,12 @@
   --color-text-muted: #5a6b82;
   --color-border: #dde5f0;
 
+  /* --- Mobile section colours: made from the brand colours above, so they
+     re-skin automatically. Raise the % for stronger colour. --- */
+  --section-tint-1: color-mix(in srgb, var(--color-primary) 10%, #ffffff);
+  --section-tint-2: color-mix(in srgb, var(--color-accent) 14%, #ffffff);
+  --section-tint-3: #ffffff;
+
   /* --- Typography --- */
   --font-heading: "Poppins", system-ui, -apple-system, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
@@ -670,4 +676,14 @@ body.modal-open { overflow: hidden; }
   .card-grid-3,
   .process-grid { grid-template-columns: 1fr; }
   .hero { padding: 110px 0 72px; }
+}
+
+/* ---------- Mobile: different coloured sections ---------- */
+/* On phones each content section gets its own background, cycling through
+   three colours (brand tint, accent tint, white), so no two sections next
+   to each other look the same. Colours are set at the top of the file. */
+@media (max-width: 720px) {
+  body > .section:nth-of-type(3n+2) { background: var(--section-tint-1); }
+  body > .section:nth-of-type(3n+1) { background: var(--section-tint-2); }
+  body > .section:nth-of-type(3n)   { background: var(--section-tint-3); }
 }
