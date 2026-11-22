@@ -563,6 +563,10 @@ a.contact-card { cursor: pointer; }
   .quote-steps li { gap: 16px; }
 }
 
+/* ---------- Visit us on (social links) [21] ---------- */
+.social-visit { text-align: center; }
+.social-visit h2 { margin-bottom: 24px; }
+
 /* ---------- Footer [14] ---------- */
 .site-footer {
   background: var(--color-secondary);
