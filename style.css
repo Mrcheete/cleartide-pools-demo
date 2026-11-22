@@ -233,6 +233,22 @@ h3 { font-size: 1.25rem; }
 
 .nav-cta { margin-left: auto; }
 
+/* Header buttons: Call Now + Get a Quote side by side on the right */
+.header-actions { display: flex; align-items: center; gap: 8px; }
+
+/* Get a Quote: blue text, no blue background — sits on the header's own colour */
+.btn-quote {
+  background: transparent;
+  color: var(--color-primary);
+}
+.btn-quote:hover { color: var(--color-primary-dark); }
+
+/* Tablets: not enough room for a centred name AND two buttons, so the
+   name moves to the left. Phones hide the buttons, so it re-centres there. */
+@media (min-width: 721px) and (max-width: 900px) {
+  .site-header .logo { position: static; transform: none; }
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
