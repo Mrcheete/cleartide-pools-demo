@@ -85,6 +85,45 @@ if (serviceModal) {
   }
 }
 
+// Back to where you were — on inner pages, any link to the homepage (Back to
+// Home button, breadcrumb, business name) acts like the browser's back button
+// when the visitor came from the homepage, so they land at the same spot they
+// left instead of the top of the page.
+// The homepage remembers its own scroll spot (in sessionStorage, so it's only
+// for this visit) instead of relying on the browser, which often forgets.
+(function () {
+  const isHome = (path) => /(^|\/)(index\.html)?$/.test(path);
+  const store = {
+    get: (k) => { try { return sessionStorage.getItem(k); } catch (e) { return null; } },
+    set: (k, v) => { try { sessionStorage.setItem(k, v); } catch (e) {} },
+    del: (k) => { try { sessionStorage.removeItem(k); } catch (e) {} },
+  };
+
+  if (isHome(location.pathname)) {
+    // Remember where the visitor is whenever they leave the homepage
+    window.addEventListener('pagehide', () => store.set('homeScroll', String(window.scrollY)));
+
+    // Coming back (browser back button or one of our Home links): jump to that spot
+    window.addEventListener('pageshow', (e) => {
+      if (e.persisted) return; // browser restored the page exactly as it was
+      const nav = performance.getEntriesByType('navigation')[0];
+      const cameBack = (nav && nav.type === 'back_forward') || store.get('returnHome');
+      const saved = store.get('homeScroll');
+      store.del('returnHome');
+      if (cameBack && saved !== null && !location.hash) {
+        history.scrollRestoration = 'manual';
+        window.scrollTo({ top: Number(saved), behavior: 'instant' });
+      }
+    });
+    return;
+  }
+
+  // Inner pages: every link to the homepage returns to the remembered spot
+  document.querySelectorAll('a[href="index.html"]').forEach((link) => {
+    link.addEventListener('click', () => store.set('returnHome', '1'));
+  });
+})();
+
 // Contact form — placeholder handler, swap with real submission logic per client
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
