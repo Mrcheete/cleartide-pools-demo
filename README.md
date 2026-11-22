@@ -10,7 +10,7 @@ All the text is placeholder. Headings say **Heading**, smaller headings say **Su
 
 | File | Purpose |
 |---|---|
-| `index.html` | Homepage: hero, about, before-the-job steps, service links, why choose us, contact cards, call-to-action banner |
+| `index.html` | Homepage: hero, about, before-the-job steps, service links, why choose us, call-to-action banner (contact details live in the footer) |
 | `installations.html` | Four service or type sections, each with a photo, a description and a list of requirements or key points (the homepage service links jump here) |
 | `quote.html` | Get a Quote page (linked from the homepage's Get a Quote button): WhatsApp and Email buttons at the top, a quote box (phone, area, email, message) that opens WhatsApp with the details filled in, and 5 "what happens next" steps. Change `data-whatsapp="27000000000"` on the form to the client's number |
 | `services.html` | Six service cards that open a popup, plus a 4-step process (not linked from the homepage; add a link if the client needs it) |
