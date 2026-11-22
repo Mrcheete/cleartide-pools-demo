@@ -124,6 +124,27 @@ if (serviceModal) {
   });
 })();
 
+// Get a Quote form — opens WhatsApp with everything the customer typed,
+// ready to send to the business (number comes from data-whatsapp on the form)
+const quoteForm = document.getElementById('quote-form');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const field = (name) => quoteForm.elements[name].value.trim();
+    const text = [
+      "Hi, I'd like a quote.",
+      '',
+      'Phone: ' + field('phone'),
+      'Area: ' + field('area'),
+      'Email: ' + field('email'),
+      '',
+      field('message'),
+    ].join('\n');
+    const url = 'https://wa.me/' + quoteForm.dataset.whatsapp + '?text=' + encodeURIComponent(text);
+    window.open(url, '_blank', 'noopener');
+  });
+}
+
 // Contact form — placeholder handler, swap with real submission logic per client
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {

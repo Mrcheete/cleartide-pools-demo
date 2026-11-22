@@ -524,6 +524,45 @@ a.contact-card { cursor: pointer; }
   border-color: var(--color-primary);
 }
 
+/* ---------- Get a Quote page: banner buttons [13] ---------- */
+.quote-contact-buttons { margin-top: 28px; }
+/* Email button on the dark banner: white outline so it reads on the dark background */
+.btn-banner-outline { border-color: #fff; color: #fff; }
+.btn-banner-outline:hover { background: #fff; color: var(--color-secondary); }
+
+/* ---------- Quote box [19] ---------- */
+.quote-box {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px 32px;
+}
+.quote-box h2 { text-align: center; margin-bottom: 28px; }
+.quote-submit { width: 100%; font-size: 1rem; }
+
+/* ---------- What happens next [20] ---------- */
+.quote-steps {
+  list-style: none;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.quote-steps li { display: flex; align-items: flex-start; gap: 20px; }
+.quote-steps .process-number { flex-shrink: 0; margin-bottom: 0; }
+.quote-steps h3 { margin-top: 4px; }
+.quote-steps p { color: var(--color-text-muted); margin-top: 6px; }
+
+@media (max-width: 560px) {
+  .quote-box { padding: 32px 20px; }
+  .quote-steps .process-number { width: 44px; height: 44px; font-size: 1.05rem; }
+  .quote-steps li { gap: 16px; }
+}
+
 /* ---------- Footer [14] ---------- */
 .site-footer {
   background: var(--color-secondary);
