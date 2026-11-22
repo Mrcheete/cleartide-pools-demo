@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <!-- Placeholder photo. Replace with the client's real photos (save them in this images folder). -->
+  <rect width="1200" height="900" fill="#e8eef6"/>
+  <path d="M520 400l60 70 40-45 100 125H480z" fill="#c3d0e2"/>
+  <circle cx="650" cy="370" r="28" fill="#c3d0e2"/>
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#7b8ba3" text-anchor="middle">Image Here</text>
+</svg>

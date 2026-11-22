@@ -12,7 +12,6 @@
    [03] About              [13] Page banner (inner pages)
    [05] Services cards     [14] Footer
    [06] Process steps      [15] Service detail modal
-   [10] Testimonials
    ========================================================================== */
 
 :root {
@@ -213,40 +212,8 @@ h3 { font-size: 1.25rem; }
   align-items: center;
   gap: 8px;
 }
-.site-header .logo-icon { display: inline-flex; width: 58px; height: 58px; }
-.logo-icon { display: none; color: var(--color-primary); flex-shrink: 0; }
-
-.main-nav {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.main-nav ul { display: flex; gap: 32px; }
-.main-nav a {
-  font-weight: 500;
-  color: var(--color-text);
-  transition: color 0.2s ease;
-}
-.main-nav a:hover,
-.main-nav a.active { color: var(--color-primary); }
 
 .nav-cta { margin-left: auto; }
-
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-.nav-toggle span {
-  width: 24px;
-  height: 2px;
-  background: var(--color-secondary);
-}
 
 /* ---------- Hero [02] ---------- */
 .hero {
@@ -255,21 +222,17 @@ h3 { font-size: 1.25rem; }
   padding: 140px 0 110px;
 }
 
-/* Full-bleed photo placeholder behind the headline, on every screen size —
-   swap for a real photo (as a background-image, or replace this div with
-   an <img>) when ready. If the photo is busy/dark, add a semi-transparent
-   overlay and switch the heading/subtext to white for readability. */
-.hero-bg.media-placeholder {
+/* Full-width photo behind the headline. Change the src in index.html to the
+   client's photo. If the photo is busy or dark, add a semi-transparent
+   overlay and switch the heading/subtext to white so they stay readable. */
+.hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  aspect-ratio: auto;
-  border: none;
-  border-radius: 0;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 16px 20px;
-  font-size: 0.85rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
 }
 
 .hero-inner {
@@ -318,40 +281,6 @@ h3 { font-size: 1.25rem; }
 }
 .back-actions { margin-top: 28px; }
 
-/* ---------- Get in touch cards [18] ---------- */
-.contact-card { cursor: default; }
-a.contact-card { cursor: pointer; }
-.contact-cards > * { min-width: 0; }
-/* Phones: the boxes become a slim list — one row each with icon, name and detail */
-@media (max-width: 560px) {
-  .card-grid.contact-cards {
-    grid-template-columns: 1fr;
-    gap: 0;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    padding: 0 16px;
-  }
-  .contact-cards .contact-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 0;
-    background: none;
-    border: none;
-    border-bottom: 1px solid var(--color-border);
-    border-radius: 0;
-  }
-  .contact-cards .contact-card:last-child { border-bottom: none; }
-  .contact-cards .contact-card:hover { box-shadow: none; transform: none; }
-  .contact-cards .card-icon { width: 34px; height: 34px; margin: 0; flex-shrink: 0; }
-  .contact-cards .card-icon svg { width: 17px; height: 17px; }
-  .contact-cards .contact-card h3 { margin: 0; font-size: 0.95rem; white-space: nowrap; }
-  .contact-cards .contact-card p { margin: 0 0 0 auto; text-align: right; font-size: 0.9rem; }
-}
-.contact-card h3 { margin-top: 16px; font-size: 1.05rem; }
-.contact-card p { margin-top: 6px; color: var(--color-text-muted); font-size: 0.95rem; overflow-wrap: break-word; }
-
 /* ---------- About [03] ---------- */
 .about-grid {
   display: grid;
@@ -360,16 +289,15 @@ a.contact-card { cursor: pointer; }
   align-items: center;
 }
 
-.media-placeholder {
-  background: var(--color-bg-alt);
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius);
+/* Photos: every photo is an <img class="media-img">. Change its src to the
+   client's photo; it's cropped to fill the space without stretching. */
+.media-img {
+  width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  font-weight: 600;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--color-bg-alt);
 }
 
 /* ---------- Cards / Services [05] ---------- */
@@ -471,15 +399,10 @@ a.contact-card { cursor: pointer; }
 
 /* ---------- Page banner [13] (inner pages) ---------- */
 .page-banner {
-  /* Placeholder leaf-pattern texture + dark overlay so the heading stays readable.
-     Swap the url() below for a real photo (e.g. url("../images/banner.jpg")) when you have one. */
+  /* Dark banner. To use a photo instead, add:
+     background-image: linear-gradient(rgba(15,30,51,.85), rgba(15,30,51,.85)), url("images/banner.jpg");
+     background-size: cover; background-position: center; */
   background-color: var(--color-secondary);
-  background-image:
-    linear-gradient(180deg, rgba(15, 30, 51, 0.82), rgba(15, 30, 51, 0.92)),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Crect width='140' height='140' fill='%230f1e33'/%3E%3Cg fill='%231e5aa8' fill-opacity='0.35'%3E%3Cpath d='M25 15c12 10 12 30 0 40-12-10-12-30 0-40z'/%3E%3Cpath d='M105 70c12 10 12 30 0 40-12-10-12-30 0-40z'/%3E%3Cpath d='M65 100c12 10 12 30 0 40-12-10-12-30 0-40z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover, 140px 140px;
-  background-position: center, center;
-  background-repeat: no-repeat, repeat;
   padding: 72px 0 56px;
   text-align: center;
 }
@@ -610,7 +533,6 @@ a.contact-card { cursor: pointer; }
 }
 
 .footer-brand .logo { color: #fff; display: inline-flex; align-items: center; gap: 10px; }
-.footer-logo-icon { width: 40px; height: 40px; }
 .footer-brand p { margin-top: 12px; color: #94a3b8; max-width: 280px; }
 
 .footer-links h4 { color: #fff; font-size: 0.95rem; margin-bottom: 16px; }
@@ -693,62 +615,16 @@ body.modal-open { overflow: hidden; }
 }
 
 @media (max-width: 720px) {
-  .header-inner { gap: 16px; }
+  .header-inner { gap: 12px; height: 64px; }
+  /* Phones: business name on the left, Call Now on the right */
   .site-header .logo {
-    font-size: 1.2rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    position: static;
+    transform: none;
+    font-size: 1.15rem;
+    white-space: normal;
+    line-height: 1.2;
   }
-  .logo-icon { display: inline-flex; width: 18px; height: 18px; }
-  .nav-toggle {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    transition: background 0.2s ease;
-  }
-  .nav-toggle:active { background: var(--color-border); }
-  .nav-toggle span {
-    background: var(--color-primary);
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-  .main-nav {
-    display: block;
-    position: absolute;
-    top: 76px;
-    right: 24px;
-    left: auto;
-    width: 200px;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateX(24px);
-    transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
-  }
-  .main-nav.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateX(0);
-  }
-  .main-nav ul { flex-direction: column; gap: 0; padding: 8px 20px; }
-  .main-nav li { border-bottom: 1px solid var(--color-border); }
-  .main-nav li:last-child { border-bottom: none; }
-  .main-nav a { display: block; padding: 12px 0; }
-  .nav-toggle { display: flex; }
-  .nav-cta { display: none; }
+  .nav-cta { padding: 10px 16px; font-size: 0.9rem; white-space: nowrap; flex-shrink: 0; }
   .card-grid-3,
   .process-grid { grid-template-columns: 1fr; }
   .hero { padding: 110px 0 72px; }

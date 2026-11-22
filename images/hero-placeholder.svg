@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <!-- Placeholder for the big photo behind the homepage heading. Replace with the client's photo. -->
+  <rect width="1600" height="900" fill="#f4f7fc"/>
+  <text x="32" y="56" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#9aa8bc">Image Here</text>
+</svg>

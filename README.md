@@ -14,10 +14,9 @@ All the text is placeholder. Headings say **Heading**, smaller headings say **Su
 | `installations.html` | Four service or type sections, each with a photo, a description and a list of requirements or key points (the homepage service links jump here) |
 | `quote.html` | Get a Quote page (linked from the homepage's Get a Quote button): WhatsApp and Email buttons at the top, a quote box (phone, area, email, message) that opens WhatsApp with the details filled in, and 5 "what happens next" steps. Change `data-whatsapp="27000000000"` on the form to the client's number |
 | `services.html` | Six service cards that open a popup, plus a 4-step process (not linked from the homepage; add a link if the client needs it) |
-| `contact.html` | Contact details, map spot and a WhatsApp button (not linked from the homepage; add a link if the client needs it) |
 | `style.css` | All styling. Colours, fonts and spacing are variables at the top of the file, so change those first for each client |
 | `main.js` | Header that hides while scrolling, footer year, services popup, contact form handler |
-| `logo.svg` | Old sample logo, not used. Replace with the client's logo or delete it |
+| `images/placeholder.svg` | Grey "Image Here" picture used by every photo until you add the client's own |
 
 ## Matching HTML to CSS
 
@@ -30,7 +29,7 @@ Every section has a number, for example `<!-- ===== HERO [02] ===== -->` in the 
 - **Email**: replace `email@example.com` and the text "Email Address".
 - **Address and hours**: "Street, Suburb, City" and "Opening Days, Opening Hours".
 - **Social links**: replace each `href="#"` with the client's page, or remove the ones they don't use.
-- **Images**: grey boxes saying "Image Here" or "Photo Here or Video Here" mark where photos go. Swap the `<div class="media-placeholder">...</div>` for an `<img>` tag.
+- **Images**: every photo is already an `<img>` tag showing `images/placeholder.svg`. Save the client's photos in the `images` folder, then change each `src="images/placeholder.svg"` to the photo's file name and write a short `alt` description of the photo. On the services page, change each card's `data-image` too.
 - **Logo**: the header shows the business name as text. To add a logo, put an `<img>` inside the `<a class="logo">` link.
 - **Meta description**: the `<meta name="description">` line in each page is the text Google shows. Write one sentence per page.
 

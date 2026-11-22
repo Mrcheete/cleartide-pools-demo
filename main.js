@@ -45,7 +45,8 @@ if (serviceModal) {
   const openModal = (card) => {
     modalTitle.textContent = card.dataset.title || '';
     modalDesc.textContent = card.dataset.desc || '';
-    modalImage.textContent = card.dataset.image || 'Image of the finished service';
+    modalImage.src = card.dataset.image || 'images/placeholder.svg';
+    modalImage.alt = card.dataset.title || '';
     serviceModal.classList.add('is-open');
     serviceModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
