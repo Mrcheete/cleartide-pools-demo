@@ -564,8 +564,18 @@ a.contact-card { cursor: pointer; }
 }
 
 /* ---------- Visit us on (social links) [21] ---------- */
-.social-visit { text-align: center; }
-.social-visit h2 { margin-bottom: 24px; }
+/* Heading on the left with the platform names as plain text beside it */
+.social-visit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+}
+.social-visit h2 { font-size: 1.4rem; }
+/* The three names stay together: if they don't fit beside the heading, they all move under it */
+.social-links { display: flex; gap: 20px; }
+.social-visit a { color: var(--color-primary); font-weight: 600; font-size: 1.05rem; }
+.social-visit a:hover { color: var(--color-primary-dark); text-decoration: underline; }
 
 /* ---------- Footer [14] ---------- */
 .site-footer {
