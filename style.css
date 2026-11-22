@@ -293,6 +293,7 @@ h3 { font-size: 1.25rem; }
 .btn-quote {
   background: transparent;
   color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 .btn-quote:hover { color: var(--color-primary-dark); }
 
