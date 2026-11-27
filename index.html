@@ -190,6 +190,48 @@
     </div>
   </section>
 
+  <!-- ===== GET A QUOTE BOX [H10] ===== -->
+  <!-- Sending the form opens WhatsApp with everything filled in.
+       Change data-whatsapp to the client's number. -->
+  <section id="quote" class="hp-section hp-quote">
+    <div class="container hp-quote-inner">
+      <div class="hp-quote-copy">
+        <p class="hp-eyebrow">Free quote</p>
+        <h2>Tell us about<br><em>your pool.</em></h2>
+        <p>Fill in the form and it opens WhatsApp with your details ready to send. We'll reply with a price as
+          soon as we can.</p>
+        <ul class="hp-checks">
+          <li>No obligation, no hidden costs</li>
+          <li>Send a photo of your pool for a faster quote</li>
+          <li>Prefer to talk? <a href="tel:+27000000000">Call Phone Number</a></li>
+        </ul>
+      </div>
+
+      <form class="hp-quote-box" id="quote-form" data-whatsapp="27000000000">
+        <h3>Get a Free Quote</h3>
+        <div class="form-row">
+          <label for="quote-phone">Phone Number</label>
+          <input type="tel" id="quote-phone" name="phone" autocomplete="tel" required>
+        </div>
+        <div class="form-row">
+          <label for="quote-area">Where do you live?</label>
+          <input type="text" id="quote-area" name="area" autocomplete="address-level2"
+            placeholder="Suburb and city" required>
+        </div>
+        <div class="form-row">
+          <label for="quote-email">Email</label>
+          <input type="email" id="quote-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-row">
+          <label for="quote-message">Message</label>
+          <textarea id="quote-message" name="message" rows="5"
+            placeholder="Tell us about your pool: size, colour of the water, what you need" required></textarea>
+        </div>
+        <button type="submit" class="hp-btn hp-btn-yellow hp-quote-submit">Send Quote Request <span aria-hidden="true">↗</span></button>
+      </form>
+    </div>
+  </section>
+
   <!-- ===== FOOTER [H8] ===== -->
   <footer id="contact" class="hp-footer">
     <div class="container hp-footer-grid">

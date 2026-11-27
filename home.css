@@ -279,6 +279,31 @@
 .hp-mini h3 { font-size: 1.2rem; }
 .hp-mini p { margin-top: 10px; color: #4f6870; }
 
+/* ---------- Get a Quote box [H10] ---------- */
+.hp-quote-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 64px;
+  align-items: center;
+}
+.hp-quote-copy h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.12; }
+.hp-quote-copy > p:not(.hp-eyebrow) { margin-top: 18px; color: #4f6870; line-height: 1.75; }
+.hp-quote-copy .hp-checks a { color: var(--hp-purple); border-bottom: 2px solid var(--hp-yellow); }
+.hp-quote-box {
+  background: #fff;
+  border-radius: 18px;
+  border-top: 6px solid var(--hp-aqua);
+  box-shadow: 0 16px 40px rgba(0, 50, 61, 0.14);
+  padding: 36px 32px;
+}
+.hp-quote-box h3 { font-size: 1.5rem; margin-bottom: 24px; }
+.hp-quote-box label { color: var(--hp-teal); }
+.hp-quote-box input,
+.hp-quote-box textarea { border-radius: 12px; border-color: #cfe3e7; background: #f7fcfd; }
+.hp-quote-box input:focus,
+.hp-quote-box textarea:focus { border-color: var(--hp-aqua); background: #fff; }
+.hp-quote-submit { width: 100%; justify-content: center; font-size: 1rem; cursor: pointer; }
+
 /* ---------- Footer [H8] ---------- */
 .hp-footer { background: var(--hp-teal-dark); color: rgba(255, 255, 255, 0.75); padding-top: 72px; }
 .hp-footer-grid {
@@ -335,6 +360,7 @@
   .hp-cards, .hp-mini { grid-template-columns: repeat(2, 1fr); }
   .hp-split-inner { grid-template-columns: 1fr; gap: 40px; }
   .hp-split-image img { aspect-ratio: 4 / 3; }
+  .hp-quote-inner { grid-template-columns: 1fr; gap: 36px; }
   .hp-footer-grid { grid-template-columns: 1fr 1fr; }
   .hp-footer-grid > div:first-child { grid-column: 1 / -1; }
 
@@ -381,6 +407,7 @@
   .hp-split { padding-bottom: 72px; }
   .hp-cards, .hp-mini { grid-template-columns: 1fr; }
   .hp-cta { padding: 56px 0; }
+  .hp-quote-box { padding: 28px 20px; }
   .hp-cta-inner { flex-direction: column; align-items: flex-start; }
   .hp-footer-grid { grid-template-columns: 1fr; }
   .hp-footer-bottom { flex-direction: column; gap: 4px; }
