@@ -14,6 +14,8 @@
   --hp-aqua: #1fb5c1;       /* highlights */
   --hp-accent: #ff7a45;     /* main buttons (coral) */
   --hp-water: #e9f8f8;      /* soft section background */
+  --hp-line: #b5dde3;       /* box borders */
+  --hp-shadow: 0 8px 22px rgba(10, 77, 104, 0.12);
 
   color: var(--hp-text);
 }
@@ -151,6 +153,7 @@
   margin: 0 auto;
   padding: 18px 18px 18px 26px;
   background: #fff;
+  border: 2px solid var(--hp-line);
   border-radius: 100px;
   box-shadow: 0 14px 34px rgba(0, 50, 61, 0.16);
   text-align: left;
@@ -183,8 +186,9 @@
   gap: 10px;
   padding: 24px 20px;
   border-radius: 22px;
-  background: var(--hp-water);
-  border: 2px solid transparent;
+  background: #fff;
+  border: 2px solid var(--hp-line);
+  box-shadow: var(--hp-shadow);
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .hp-tile:hover { border-color: var(--hp-aqua); transform: translateY(-4px); }
@@ -217,8 +221,9 @@
   margin: 0 auto;
   padding: 20px;
   background: #fff;
+  border: 2px solid var(--hp-line);
   border-radius: 26px;
-  box-shadow: 0 14px 34px rgba(0, 50, 61, 0.1);
+  box-shadow: var(--hp-shadow);
 }
 .hp-ba-card .hp-center { margin-top: 20px; }
 .hp-ba { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -229,6 +234,7 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 22px;
+  border: 2px solid var(--hp-line);
   background: var(--hp-water);
 }
 .hp-ba figcaption {
@@ -315,8 +321,9 @@
   flex-direction: column;
   padding: 22px 22px;
   border-radius: 22px;
-  background: var(--hp-water);
-  border: 2px solid transparent;
+  background: #fff;
+  border: 2px solid var(--hp-line);
+  box-shadow: var(--hp-shadow);
   scroll-margin-top: 90px;
   transition: border-color 0.2s ease;
 }
@@ -353,7 +360,7 @@
 .hp-quote-box h3 { font-size: 1.5rem; margin-bottom: 16px; }
 .hp-quote-box label { color: var(--hp-text); }
 .hp-quote-box input,
-.hp-quote-box textarea { border-radius: 12px; border-color: #cfe3e7; background: #f7fcfd; }
+.hp-quote-box textarea { border-radius: 12px; border: 2px solid var(--hp-line); background: #fff; }
 .hp-quote-box input:focus,
 .hp-quote-box textarea:focus { border-color: var(--hp-aqua); background: #fff; }
 .hp-quote-box .form-row { margin-bottom: 14px; }
