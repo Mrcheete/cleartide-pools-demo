@@ -46,82 +46,97 @@
   </header>
 
   <!-- ===== PAGE BANNER [S1] ===== -->
+  <!-- Same light "water" look as the homepage hero. The chips jump to each service. -->
   <section class="hp-banner">
     <div class="container">
       <p class="hp-crumb"><a href="index.html">Home</a> / Services</p>
       <h1>Our <em>Services</em></h1>
-      <p>Everything your pool needs, in one place.</p>
+      <p class="hp-banner-text">Everything your pool needs, in one place.</p>
+      <nav class="hp-chips" aria-label="Jump to a service">
+        <a href="#service-1">Weekly Cleaning</a>
+        <a href="#service-2">Green Pool Rescue</a>
+        <a href="#service-3">Pump &amp; Filter</a>
+        <a href="#service-4">Deep Clean</a>
+      </nav>
     </div>
+    <svg class="hp-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 35 C 240 70 480 0 720 28 S 1200 60 1440 30 L1440 70 L0 70 Z" />
+    </svg>
   </section>
 
   <!-- ===== SERVICES LIST [S2] ===== -->
-  <!-- Each service: photo, name, one line, 3 ticks and a WhatsApp button
+  <!-- Each service: icon, name, one line, 3 ticks and a WhatsApp button
        that already says which service the customer wants. -->
-  <section class="hp-section hp-soft">
+  <section class="hp-section hp-services">
     <div class="container hp-svc-list">
 
       <article id="service-1" class="hp-svc">
-        <img src="images/placeholder.svg" width="1200" height="900" loading="lazy" alt="Describe this photo, e.g. a pool being vacuumed">
-        <div class="hp-svc-body">
+        <div class="hp-svc-top">
+          <span class="hp-tile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></svg>
+          </span>
           <span class="hp-card-num">01 / Clean</span>
-          <h2>Weekly Pool Cleaning</h2>
-          <p>A clean, safe pool every week.</p>
-          <ul class="hp-checks">
+        </div>
+        <h2>Weekly Pool Cleaning</h2>
+        <p>A clean, safe pool every week.</p>
+        <ul class="hp-checks">
             <li>Vacuum, brush and skim</li>
             <li>Baskets emptied</li>
             <li>Water tested and balanced</li>
-          </ul>
-          <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27d%20like%20a%20quote%20for%20weekly%20pool%20cleaning."
-            target="_blank" rel="noopener" class="hp-btn hp-btn-teal">Get a Quote <span aria-hidden="true">↗</span></a>
-        </div>
+        </ul>
+        <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27d%20like%20a%20quote%20for%20weekly%20pool%20cleaning."
+          target="_blank" rel="noopener" class="hp-btn hp-btn-yellow">Get a Quote <span aria-hidden="true">↗</span></a>
       </article>
-
       <article id="service-2" class="hp-svc">
-        <img src="images/placeholder.svg" width="1200" height="900" loading="lazy" alt="Describe this photo, e.g. a green pool before and after">
-        <div class="hp-svc-body">
+        <div class="hp-svc-top">
+          <span class="hp-tile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+          </span>
           <span class="hp-card-num">02 / Rescue</span>
-          <h2>Green Pool Rescue</h2>
-          <p>From green or cloudy back to clear.</p>
-          <ul class="hp-checks">
+        </div>
+        <h2>Green Pool Rescue</h2>
+        <p>From green or cloudy back to clear.</p>
+        <ul class="hp-checks">
             <li>Shock treatment</li>
             <li>Algae brushed and vacuumed</li>
             <li>Filter cleaned</li>
-          </ul>
-          <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27d%20like%20a%20quote%20for%20a%20green%20pool%20rescue."
-            target="_blank" rel="noopener" class="hp-btn hp-btn-teal">Get a Quote <span aria-hidden="true">↗</span></a>
-        </div>
+        </ul>
+        <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27d%20like%20a%20quote%20for%20a%20green%20pool%20rescue."
+          target="_blank" rel="noopener" class="hp-btn hp-btn-yellow">Get a Quote <span aria-hidden="true">↗</span></a>
       </article>
-
       <article id="service-3" class="hp-svc">
-        <img src="images/placeholder.svg" width="1200" height="900" loading="lazy" alt="Describe this photo, e.g. a pool pump being repaired">
-        <div class="hp-svc-body">
+        <div class="hp-svc-top">
+          <span class="hp-tile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.5-.6-.6-2.5z"/></svg>
+          </span>
           <span class="hp-card-num">03 / Fix</span>
-          <h2>Pump &amp; Filter Repairs</h2>
-          <p>We find the problem and fix it.</p>
-          <ul class="hp-checks">
+        </div>
+        <h2>Pump &amp; Filter Repairs</h2>
+        <p>We find the problem and fix it.</p>
+        <ul class="hp-checks">
             <li>Pumps that won't run</li>
             <li>Leaks and high pressure</li>
             <li>Filter sand replaced</li>
-          </ul>
-          <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27d%20like%20a%20quote%20for%20a%20pump%20or%20filter%20repair."
-            target="_blank" rel="noopener" class="hp-btn hp-btn-teal">Get a Quote <span aria-hidden="true">↗</span></a>
-        </div>
+        </ul>
+        <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27d%20like%20a%20quote%20for%20a%20pump%20or%20filter%20repair."
+          target="_blank" rel="noopener" class="hp-btn hp-btn-yellow">Get a Quote <span aria-hidden="true">↗</span></a>
       </article>
-
       <article id="service-4" class="hp-svc">
-        <img src="images/placeholder.svg" width="1200" height="900" loading="lazy" alt="Describe this photo, e.g. a sparkling pool after a deep clean">
-        <div class="hp-svc-body">
+        <div class="hp-svc-top">
+          <span class="hp-tile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.2 5.3L20 9l-4.4 3.8L17 19l-5-3-5 3 1.4-6.2L4 9l5.8-.7z"/></svg>
+          </span>
           <span class="hp-card-num">04 / Once-off</span>
-          <h2>Once-off Deep Clean</h2>
-          <p>One visit, ready for summer.</p>
-          <ul class="hp-checks">
+        </div>
+        <h2>Once-off Deep Clean</h2>
+        <p>One visit, ready for summer.</p>
+        <ul class="hp-checks">
             <li>Full clean, top to bottom</li>
             <li>Chemicals balanced</li>
             <li>No contract needed</li>
-          </ul>
-          <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27d%20like%20a%20quote%20for%20a%20once-off%20deep%20clean."
-            target="_blank" rel="noopener" class="hp-btn hp-btn-teal">Get a Quote <span aria-hidden="true">↗</span></a>
-        </div>
+        </ul>
+        <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27d%20like%20a%20quote%20for%20a%20once-off%20deep%20clean."
+          target="_blank" rel="noopener" class="hp-btn hp-btn-yellow">Get a Quote <span aria-hidden="true">↗</span></a>
       </article>
 
     </div>
@@ -135,7 +150,7 @@
         <h2>Contact us on WhatsApp.</h2>
       </div>
       <a href="https://wa.me/27000000000?text=Hi%20Business%20Name%2C%20I%27m%20not%20sure%20what%20my%20pool%20needs.%20Can%20you%20help%3F"
-        target="_blank" rel="noopener" class="hp-btn hp-btn-yellow">Chat on WhatsApp <span aria-hidden="true">↗</span></a>
+        target="_blank" rel="noopener" class="hp-btn hp-btn-wa">Chat on WhatsApp <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
