@@ -315,7 +315,8 @@
 .hp-chips a:hover { background: var(--hp-main); color: #fff; }
 
 /* ---------- Services page: list [S2] ---------- */
-.hp-svc-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+/* Laptops: all 4 cards in one row so no card has an empty half */
+.hp-svc-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .hp-svc {
   display: flex;
   flex-direction: column;
@@ -329,10 +330,10 @@
 }
 .hp-svc:hover, .hp-svc:target { border-color: var(--hp-aqua); }
 .hp-svc-top { display: flex; align-items: center; justify-content: space-between; }
-.hp-svc h2 { font-size: 1.45rem; margin-top: 12px; }
+.hp-svc h2 { font-size: 1.25rem; margin-top: 12px; }
 .hp-svc > p { color: #4f6870; margin-top: 6px; }
 .hp-svc .hp-checks { margin: 14px 0 16px; gap: 8px; flex: 1; }
-.hp-svc .hp-btn { align-self: flex-start; }
+.hp-svc .hp-btn { align-self: stretch; justify-content: center; }
 
 /* ---------- Get a Quote box [H10] ---------- */
 /* Purple section with a white form card */
@@ -427,6 +428,7 @@
 /* ---------- Tablet ---------- */
 @media (max-width: 900px) {
   .hp-tiles { gap: 14px; }
+  .hp-svc-list { grid-template-columns: repeat(2, 1fr); }
   .hp-footer-grid { grid-template-columns: 1fr 1fr; }
   .hp-footer-grid > div:first-child { grid-column: 1 / -1; }
 
