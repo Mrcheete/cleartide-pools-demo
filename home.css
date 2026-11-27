@@ -252,21 +252,30 @@
 .hp-cta p:not(.hp-eyebrow) { color: rgba(255, 255, 255, 0.85); margin-top: 8px; }
 .hp-cta .hp-btn { flex-shrink: 0; }
 
-/* ---------- How we can help [H7] ---------- */
-.hp-mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.hp-mini > div { background: #fff; border-radius: 14px; padding: 34px 28px; }
-.hp-mini-icon {
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #d9f4f5;
-  margin-bottom: 20px;
+/* ---------- Services page: banner [S1] ---------- */
+.hp-banner { background: var(--hp-teal-dark); padding: 64px 0 56px; text-align: center; }
+.hp-banner h1 { color: #fff; font-size: clamp(2.2rem, 6vw, 3.4rem); margin-top: 10px; }
+.hp-banner p:last-child { color: rgba(255, 255, 255, 0.8); margin-top: 10px; font-size: 1.1rem; }
+.hp-crumb { color: rgba(255, 255, 255, 0.7); font-size: 1rem; font-weight: 600; }
+.hp-crumb a { color: var(--hp-aqua); }
+
+/* ---------- Services page: list [S2] ---------- */
+.hp-svc-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.hp-svc {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 50, 61, 0.08);
+  scroll-margin-top: 90px;
 }
-.hp-mini-icon svg { width: 26px; height: 26px; fill: none; stroke: var(--hp-teal); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.hp-mini h3 { font-size: 1.2rem; }
-.hp-mini p { margin-top: 10px; color: #4f6870; }
+.hp-svc img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--hp-water); }
+.hp-svc-body { padding: 24px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+.hp-svc h2 { font-size: 1.5rem; margin-top: 6px; }
+.hp-svc-body > p { color: #4f6870; margin-top: 6px; }
+.hp-svc .hp-checks { margin: 18px 0 22px; gap: 10px; flex: 1; }
+.hp-svc .hp-btn { align-self: flex-start; }
 
 /* ---------- Get a Quote box [H10] ---------- */
 .hp-quote-inner {
@@ -346,7 +355,7 @@
 
 /* ---------- Tablet ---------- */
 @media (max-width: 900px) {
-  .hp-cards, .hp-mini { grid-template-columns: repeat(2, 1fr); }
+  .hp-cards { grid-template-columns: repeat(2, 1fr); }
   .hp-split-inner { grid-template-columns: 1fr; gap: 40px; }
   .hp-split-image img { aspect-ratio: 4 / 3; }
   .hp-quote-inner { grid-template-columns: 1fr; gap: 36px; }
@@ -394,7 +403,7 @@
 
   .hp-section, .hp-split { padding: 56px 0; }
   .hp-heading { margin-bottom: 32px; }
-  .hp-cards, .hp-mini { grid-template-columns: 1fr; gap: 18px; }
+  .hp-cards, .hp-svc-list { grid-template-columns: 1fr; gap: 18px; }
   /* Service cards: compact row with a small photo on the left */
   .hp-cards { gap: 14px; }
   .hp-card { flex-direction: row; align-items: stretch; border-radius: 12px; }
@@ -408,7 +417,11 @@
   .hp-quote-box h3 { margin-bottom: 18px; }
   .hp-center { margin-top: 32px; }
   .hp-center .hp-btn { width: 100%; justify-content: center; }
-  .hp-mini > div { padding: 26px 22px; }
+  .hp-banner { padding: 44px 0 40px; }
+  .hp-svc img { aspect-ratio: 2 / 1; }
+  .hp-svc-body { padding: 20px 20px 22px; }
+  .hp-svc h2 { font-size: 1.3rem; }
+  .hp-svc .hp-btn { align-self: stretch; justify-content: center; }
 
   .hp-cta { padding: 48px 0; }
   .hp-cta-inner { flex-direction: column; align-items: stretch; gap: 22px; }
