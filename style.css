@@ -15,10 +15,9 @@
    ========================================================================== */
 
 :root {
-  /* "light dark" tells Chrome this site handles dark mode itself, so Chrome's
-     "darken all websites" setting leaves it alone. The site's own dark-mode
-     rules (below) are the same light colours, so it always stays white. */
-  color-scheme: light dark;
+  /* Light only, with no dark-mode rules anywhere: some phone apps darken
+     any site that says it supports dark mode, so we never say it. */
+  color-scheme: only light;
 
   /* --- Brand colors: change these first for a new client --- */
   --color-primary: #1e5aa8;
@@ -45,24 +44,6 @@
   --container-width: 1140px;
   --radius: 10px;
   --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
-}
-
-/* Backup lock, independent of the color-scheme property above: some mobile
-   browsers auto-darken pages regardless of color-scheme, so re-declare every
-   color explicitly under prefers-color-scheme: dark to the exact same light
-   values — this guarantees the page never actually switches to a dark look. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #1e5aa8;
-    --color-primary-dark: #15407a;
-    --color-secondary: #0f1e33;
-    --color-accent: #f5a623;
-    --color-bg: #ffffff;
-    --color-bg-alt: #f4f7fc;
-    --color-text: #14213d;
-    --color-text-muted: #5a6b82;
-    --color-border: #dde5f0;
-  }
 }
 
 /* ---------- Reset ---------- */
