@@ -138,7 +138,7 @@
 .hp-hero-text { color: #4f6870; font-size: 1.15rem; margin: 18px auto 30px; }
 .hp-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
-.hp-hero-photo { position: relative; z-index: 1; max-width: 1000px; margin-top: 48px; }
+.hp-hero-photo { position: relative; z-index: 1; max-width: 1000px; margin-top: 48px; padding-bottom: 24px; }
 .hp-hero-photo img {
   width: 100%;
   height: auto;
@@ -421,16 +421,18 @@
   .hp-hero-actions .hp-btn { flex: 1 1 100%; justify-content: center; padding: 16px 24px; }
   .hp-hero-photo { margin-top: 32px; }
   .hp-hero-photo img { aspect-ratio: 4 / 3; border-radius: 22px; }
+  /* Phones: the card sits under the photo instead of on top of it */
   .hp-photo-card {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
-    margin: -36px 10px 0;
+    margin: 16px 0 0;
     padding: 18px;
     border-radius: 20px;
     text-align: center;
   }
   .hp-photo-card .hp-btn { justify-content: center; }
+  .hp-photo-card b { display: block; }
   .hp-wave { height: 40px; }
 
   .hp-section { padding: 56px 0; }
