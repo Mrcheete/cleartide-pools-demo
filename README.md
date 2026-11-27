@@ -44,3 +44,10 @@ Every section has a number, for example `<!-- ===== HERO [02] ===== -->` in the 
 
 - Class names in the HTML (`hero`, `card`, etc.). The CSS and JavaScript depend on them.
 - The `<script src="main.js">` tag at the bottom of each page.
+
+## Photo credits (demo only)
+
+Free Pexels licence, no attribution required. Swap for the client's own photos before going live.
+
+- `images/before-pool.jpg`: Arthur Shuraev, https://www.pexels.com/photo/view-of-autumnal-leaves-floating-in-a-dirty-swimming-pool-15185306/
+- `images/after-pool.jpg`: Wendy Wei, https://www.pexels.com/photo/swimming-pool-in-garden-of-cottage-5306735/
