@@ -15,10 +15,10 @@
    ========================================================================== */
 
 :root {
-  /* Locks the page to the light palette below — stops phones/browsers with a
-     system dark mode (Android "force dark", Samsung Internet, etc.) from
-     auto-inverting the white accents to dark. */
-  color-scheme: only light;
+  /* "light dark" tells Chrome this site handles dark mode itself, so Chrome's
+     "darken all websites" setting leaves it alone. The site's own dark-mode
+     rules (below) are the same light colours, so it always stays white. */
+  color-scheme: light dark;
 
   /* --- Brand colors: change these first for a new client --- */
   --color-primary: #1e5aa8;
@@ -74,6 +74,7 @@ html {
 }
 
 body {
+  color-scheme: light; /* form boxes, scrollbars etc. stay light */
   font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
@@ -464,6 +465,8 @@ h3 { font-size: 1.25rem; }
   border-radius: var(--radius);
   font-family: inherit;
   font-size: 1rem;
+  background-color: #ffffff;
+  color: var(--color-text);
 }
 .form-row input:focus,
 .form-row textarea:focus {
