@@ -140,7 +140,7 @@
 .hp-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
 .hp-hero-photo { position: relative; z-index: 1; margin-top: 28px; padding-bottom: 8px; }
-/* White "send us a photo" card under the hero text */
+/* White "contact us on WhatsApp" card under the hero text */
 .hp-photo-card {
   position: relative;
   display: flex;
