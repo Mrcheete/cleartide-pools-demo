@@ -7,17 +7,18 @@
    ========================================================================== */
 
 .home {
-  --hp-purple: #782b90;     /* headings */
-  --hp-teal: #005768;       /* text, buttons */
-  --hp-teal-dark: #00323d;  /* top bar, footer */
-  --hp-aqua: #38c0c5;       /* highlights, strip */
-  --hp-yellow: #ffe800;     /* main buttons */
-  --hp-water: #eaf8fa;      /* soft section background */
+  /* "Ocean & Coral" palette */
+  --hp-main: #0a4d68;       /* headings, icons, quote section */
+  --hp-text: #163e4c;       /* body text */
+  --hp-dark: #062b3a;       /* top bar, footer */
+  --hp-aqua: #1fb5c1;       /* highlights */
+  --hp-accent: #ff7a45;     /* main buttons (coral) */
+  --hp-water: #e9f8f8;      /* soft section background */
 
-  color: var(--hp-teal);
+  color: var(--hp-text);
 }
 
-.home h1, .home h2, .home h3, .home h4 { color: var(--hp-purple); }
+.home h1, .home h2, .home h3, .home h4 { color: var(--hp-main); }
 .home h2 em, .home h1 em { font-style: normal; color: var(--hp-aqua); }
 
 .hp-eyebrow {
@@ -42,14 +43,14 @@
   transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
 }
 .hp-btn:hover { transform: translateY(-2px); }
-.hp-btn-yellow { background: var(--hp-yellow); border-color: var(--hp-yellow); color: var(--hp-teal); }
-.hp-btn-teal { background: var(--hp-teal); border-color: var(--hp-teal); color: #fff; }
+.hp-btn-yellow { background: var(--hp-accent); border-color: var(--hp-accent); color: #fff; box-shadow: 0 8px 20px rgba(255, 122, 69, 0.3); }
+.hp-btn-teal { background: var(--hp-text); border-color: var(--hp-text); color: #fff; }
 .hp-btn-ghost { border-color: rgba(255, 255, 255, 0.8); color: #fff; }
-.hp-btn-ghost:hover { background: #fff; color: var(--hp-teal); }
+.hp-btn-ghost:hover { background: #fff; color: var(--hp-text); }
 
 /* ---------- Top bar [H0] ---------- */
 .hp-topbar {
-  background: var(--hp-teal-dark);
+  background: var(--hp-dark);
   color: #fff;
   font-size: 0.85rem;
   padding: 8px 0;
@@ -75,7 +76,7 @@
   font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 800;
-  color: var(--hp-purple);
+  color: var(--hp-main);
   text-transform: uppercase;
 }
 .hp-brand small {
@@ -88,7 +89,7 @@
 .hp-brand-light b { color: #fff; }
 
 .hp-nav { display: flex; align-items: center; gap: 28px; font-weight: 600; }
-.hp-nav a:not(.hp-btn):hover { color: var(--hp-purple); }
+.hp-nav a:not(.hp-btn):hover { color: var(--hp-main); }
 .hp-nav .hp-nav-quote { padding: 11px 22px; }
 
 /* Round purple menu button (phones only) */
@@ -98,7 +99,7 @@
   height: 48px;
   border-radius: 50%;
   border: 0;
-  background: var(--hp-purple);
+  background: var(--hp-main);
   cursor: pointer;
   flex-direction: column;
   align-items: center;
@@ -112,8 +113,8 @@
 .hp-hero {
   position: relative;
   background:
-    radial-gradient(circle at 15% 20%, rgba(56, 192, 197, 0.22), transparent 45%),
-    radial-gradient(circle at 85% 10%, rgba(120, 43, 144, 0.10), transparent 40%),
+    radial-gradient(circle at 15% 20%, rgba(31, 181, 193, 0.22), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(255, 122, 69, 0.12), transparent 40%),
     linear-gradient(180deg, #def5f8 0%, #f3fbfc 100%);
   padding: 72px 0 0;
   text-align: center;
@@ -124,7 +125,7 @@
   padding: 7px 16px;
   border-radius: 100px;
   background: #fff;
-  color: var(--hp-teal);
+  color: var(--hp-text);
   font-size: 0.85rem;
   font-weight: 700;
   box-shadow: 0 4px 14px rgba(0, 87, 104, 0.1);
@@ -164,7 +165,7 @@
   text-align: left;
 }
 .hp-photo-card p { color: #4f6870; }
-.hp-photo-card b { color: var(--hp-purple); }
+.hp-photo-card b { color: var(--hp-main); }
 .hp-btn-wa { background: #25d366; border-color: #25d366; color: #fff; flex-shrink: 0; }
 
 .hp-wave { display: block; width: 100%; height: 70px; margin-top: -10px; fill: #fff; }
@@ -202,10 +203,10 @@
   width: 64px;
   height: 64px;
   border-radius: 20px;
-  background: var(--hp-purple);
+  background: var(--hp-main);
 }
 .hp-tile-icon svg { width: 30px; height: 30px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.hp-tile-text b { display: block; font-family: var(--font-heading); font-size: 1.2rem; color: var(--hp-purple); }
+.hp-tile-text b { display: block; font-family: var(--font-heading); font-size: 1.2rem; color: var(--hp-main); }
 .hp-tile-text small { display: block; margin-top: 6px; font-size: 0.95rem; color: #4f6870; }
 .hp-tile-arrow { font-weight: 700; font-size: 1.2rem; color: var(--hp-aqua); }
 
@@ -236,13 +237,13 @@
   padding: 6px 14px;
   border-radius: 100px;
   background: #fff;
-  color: var(--hp-teal);
+  color: var(--hp-text);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.hp-ba figcaption.is-after { background: var(--hp-yellow); }
+.hp-ba figcaption.is-after { background: var(--hp-accent); color: #fff; }
 
 /* Round tick list (services page) */
 .hp-checks { margin: 26px 0 28px; display: grid; gap: 14px; }
@@ -261,18 +262,18 @@
   display: grid;
   place-items: center;
 }
-.hp-text-link { font-weight: 700; color: var(--hp-purple); border-bottom: 2px solid var(--hp-yellow); }
+.hp-text-link { font-weight: 700; color: var(--hp-main); border-bottom: 2px solid var(--hp-accent); }
 
 /* ---------- Call to action [H6] ---------- */
-.hp-cta { background: var(--hp-purple); padding: 72px 0; }
+.hp-cta { background: var(--hp-main); padding: 72px 0; }
 .hp-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.hp-cta .hp-eyebrow { color: var(--hp-yellow); }
+.hp-cta .hp-eyebrow { color: var(--hp-accent); }
 .hp-cta h2 { color: #fff; font-size: clamp(1.9rem, 4vw, 2.6rem); }
 .hp-cta p:not(.hp-eyebrow) { color: rgba(255, 255, 255, 0.85); margin-top: 8px; }
 .hp-cta .hp-btn { flex-shrink: 0; }
 
 /* ---------- Services page: banner [S1] ---------- */
-.hp-banner { background: var(--hp-teal-dark); padding: 64px 0 56px; text-align: center; }
+.hp-banner { background: var(--hp-dark); padding: 64px 0 56px; text-align: center; }
 .hp-banner h1 { color: #fff; font-size: clamp(2.2rem, 6vw, 3.4rem); margin-top: 10px; }
 .hp-banner p:last-child { color: rgba(255, 255, 255, 0.8); margin-top: 10px; font-size: 1.1rem; }
 .hp-crumb { color: rgba(255, 255, 255, 0.7); font-size: 1rem; font-weight: 600; }
@@ -298,10 +299,10 @@
 
 /* ---------- Get a Quote box [H10] ---------- */
 /* Purple section with a white form card */
-.hp-quote { background: var(--hp-purple); }
-.hp-quote .hp-eyebrow { color: var(--hp-yellow); }
+.hp-quote { background: var(--hp-main); }
+.hp-quote .hp-eyebrow { color: var(--hp-accent); }
 .hp-quote .hp-quote-copy h2 { color: #fff; }
-.hp-quote .hp-quote-copy h2 em { color: var(--hp-yellow); }
+.hp-quote .hp-quote-copy h2 em { color: var(--hp-accent); }
 .hp-quote .hp-quote-copy > p:not(.hp-eyebrow) { color: rgba(255, 255, 255, 0.85); }
 .hp-quote .hp-quote-copy a { color: #fff; }
 .hp-quote-inner {
@@ -312,7 +313,7 @@
 }
 .hp-quote-copy h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.12; }
 .hp-quote-copy > p:not(.hp-eyebrow) { margin-top: 18px; color: #4f6870; line-height: 1.75; }
-.hp-quote-copy a { color: var(--hp-purple); border-bottom: 2px solid var(--hp-yellow); }
+.hp-quote-copy a { color: var(--hp-main); border-bottom: 2px solid var(--hp-accent); }
 .hp-quote-box {
   background: #fff;
   border-radius: 18px;
@@ -320,7 +321,7 @@
   padding: 36px 32px;
 }
 .hp-quote-box h3 { font-size: 1.5rem; margin-bottom: 24px; }
-.hp-quote-box label { color: var(--hp-teal); }
+.hp-quote-box label { color: var(--hp-text); }
 .hp-quote-box input,
 .hp-quote-box textarea { border-radius: 12px; border-color: #cfe3e7; background: #f7fcfd; }
 .hp-quote-box input:focus,
@@ -328,7 +329,7 @@
 .hp-quote-submit { width: 100%; justify-content: center; font-size: 1rem; cursor: pointer; }
 
 /* ---------- Footer [H8] ---------- */
-.hp-footer { background: var(--hp-teal-dark); color: rgba(255, 255, 255, 0.75); padding-top: 72px; }
+.hp-footer { background: var(--hp-dark); color: rgba(255, 255, 255, 0.75); padding-top: 72px; }
 .hp-footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -339,7 +340,7 @@
 .hp-footer-grid > div > p { margin-top: 14px; max-width: 320px; }
 .hp-footer h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; }
 .hp-footer-grid a:not(.hp-brand) { display: block; margin-bottom: 10px; transition: color 0.2s ease; }
-.hp-footer-grid a:not(.hp-brand):hover { color: var(--hp-yellow); }
+.hp-footer-grid a:not(.hp-brand):hover { color: var(--hp-accent); }
 .hp-footer-grid div > p + p { margin-top: 6px; }
 .hp-footer-bottom {
   display: flex;
