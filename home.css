@@ -73,7 +73,9 @@
   height: 76px;
   gap: 24px;
 }
-.hp-brand { display: flex; flex-direction: column; line-height: 1.15; }
+.hp-brand { display: flex; align-items: center; gap: 10px; line-height: 1.15; }
+.hp-brand img { width: 40px; height: 40px; flex-shrink: 0; }
+.hp-brand span { display: flex; flex-direction: column; }
 .hp-brand b {
   font-family: var(--font-heading);
   font-size: 1.2rem;

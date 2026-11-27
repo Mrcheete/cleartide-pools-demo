@@ -13,7 +13,9 @@ All the text is placeholder. Headings say **Heading**, smaller headings say **Su
 | `index.html` | Homepage: hero, about, before-the-job steps, service links, why choose us, call-to-action banner (contact details live in the footer) |
 | `installations.html` | Four service or type sections, each with a photo, a description and a list of requirements or key points (the homepage service links jump here) |
 | `quote.html` | Get a Quote page (linked from the homepage's Get a Quote button): WhatsApp and Email buttons at the top, a quote box (phone, area, email, message) that opens WhatsApp with the details filled in, and 5 "what happens next" steps. Change `data-whatsapp="27000000000"` on the form to the client's number |
-| `services.html` | Six service cards that open a popup, plus a 4-step process (not linked from the homepage; add a link if the client needs it) |
+| `privacy.html` | POPIA privacy policy, linked from every footer and from the note under the quote form |
+| `home.css` | Styles for the pool site pages (homepage, services, quote, privacy). Colours are the 6 variables at the top |
+| `images/logo-mark.svg` | Logo mark, also used as the browser-tab icon |
 | `style.css` | All styling. Colours, fonts and spacing are variables at the top of the file, so change those first for each client |
 | `main.js` | Header that hides while scrolling, footer year, services popup, contact form handler |
 | `images/placeholder.svg` | Grey "Image Here" picture used by every photo until you add the client's own |
