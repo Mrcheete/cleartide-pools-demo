@@ -139,17 +139,8 @@
 .hp-hero-text { color: #4f6870; font-size: 1.15rem; margin: 18px auto 30px; }
 .hp-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
-.hp-hero-photo { position: relative; z-index: 1; max-width: 1000px; margin-top: 48px; padding-bottom: 24px; }
-.hp-hero-photo img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
-  border-radius: 28px;
-  box-shadow: 0 24px 50px rgba(0, 50, 61, 0.18);
-  background: var(--hp-water);
-}
-/* White card sitting on the bottom edge of the photo */
+.hp-hero-photo { position: relative; z-index: 1; margin-top: 40px; padding-bottom: 24px; }
+/* White "send us a photo" card under the hero text */
 .hp-photo-card {
   position: relative;
   display: flex;
@@ -157,7 +148,7 @@
   justify-content: space-between;
   gap: 20px;
   max-width: 620px;
-  margin: -44px auto 0;
+  margin: 0 auto;
   padding: 18px 18px 18px 26px;
   background: #fff;
   border-radius: 100px;
@@ -420,14 +411,12 @@
   .hp-hero h1 { margin-top: 16px; }
   .hp-hero-text { font-size: 1.02rem; margin: 14px auto 24px; }
   .hp-hero-actions .hp-btn { flex: 1 1 100%; justify-content: center; padding: 16px 24px; }
-  .hp-hero-photo { margin-top: 32px; }
-  .hp-hero-photo img { aspect-ratio: 4 / 3; border-radius: 22px; }
-  /* Phones: the card sits under the photo instead of on top of it */
+  .hp-hero-photo { margin-top: 28px; }
   .hp-photo-card {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
-    margin: 16px 0 0;
+    margin: 0;
     padding: 18px;
     border-radius: 20px;
     text-align: center;
