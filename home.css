@@ -209,7 +209,7 @@
 .hp-card b { margin-top: 18px; color: var(--hp-purple); }
 
 /* ---------- Split: image + checklist [H5] ---------- */
-.hp-split { padding: 0 0 96px; }
+.hp-split { padding: 96px 0; }
 .hp-split-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -374,22 +374,52 @@
 }
 
 /* ---------- Phone ---------- */
+/* Phones come first for this client: less scrolling, big tap targets,
+   and the floating buttons shrink to round icons so they never cover text. */
 @media (max-width: 720px) {
-  .hp-header-inner { height: 68px; }
+  .hp-topbar { font-size: 0.75rem; text-align: center; padding: 6px 0; }
+  .hp-header-inner { height: 64px; }
   .hp-brand b { font-size: 1.05rem; }
-  .hp-hero { padding: 72px 0 64px; }
-  .hp-hero-text { font-size: 1.05rem; }
-  .hp-hero-actions .hp-btn { flex: 1 1 100%; justify-content: center; }
+  .hp-brand small { font-size: 0.6rem; }
+  .hp-menu { width: 44px; height: 44px; }
 
-  .hp-strip-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .hp-hero { padding: 56px 0 48px; }
+  .hp-hero-text { font-size: 1.02rem; line-height: 1.65; margin: 18px 0 26px; }
+  .hp-hero-actions .hp-btn { flex: 1 1 100%; justify-content: center; padding: 16px 24px; }
+  .hp-ticks { margin-top: 22px; gap: 6px 16px; }
+
+  .hp-strip-inner { flex-direction: column; align-items: flex-start; gap: 14px; padding-top: 22px; padding-bottom: 22px; }
+  .hp-strip-inner p { font-size: 1rem; }
   .hp-strip-inner .hp-btn { width: 100%; justify-content: center; }
 
-  .hp-section { padding: 72px 0; }
-  .hp-split { padding-bottom: 72px; }
-  .hp-cards, .hp-mini { grid-template-columns: 1fr; }
-  .hp-cta { padding: 56px 0; }
-  .hp-quote-box { padding: 28px 20px; }
-  .hp-cta-inner { flex-direction: column; align-items: flex-start; }
-  .hp-footer-grid { grid-template-columns: 1fr; }
-  .hp-footer-bottom { flex-direction: column; gap: 4px; }
+  .hp-section, .hp-split { padding: 56px 0; }
+  .hp-heading { margin-bottom: 32px; }
+  .hp-cards, .hp-mini { grid-template-columns: 1fr; gap: 18px; }
+  .hp-card-body { padding: 20px 20px 22px; }
+  .hp-split-inner, .hp-quote-inner { gap: 28px; }
+  .hp-quote-box { padding: 26px 18px; }
+  .hp-quote-box h3 { margin-bottom: 18px; }
+  .hp-center { margin-top: 32px; }
+  .hp-center .hp-btn { width: 100%; justify-content: center; }
+  .hp-mini > div { padding: 26px 22px; }
+
+  .hp-cta { padding: 48px 0; }
+  .hp-cta-inner { flex-direction: column; align-items: stretch; gap: 22px; }
+  .hp-cta .hp-btn { justify-content: center; }
+
+  .hp-footer { padding-top: 48px; }
+  .hp-footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hp-footer-grid a:not(.hp-brand) { padding: 4px 0; }
+  .hp-footer-bottom { flex-direction: column; gap: 4px; padding-bottom: 88px; }
+
+  /* Floating buttons: round icons only */
+  .hp-float { right: 14px; bottom: 14px; gap: 12px; }
+  .hp-float a {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    justify-content: center;
+    font-size: 0;            /* hide the word, keep the icon */
+  }
+  .hp-float a::before { font-size: 1.5rem; }
 }
